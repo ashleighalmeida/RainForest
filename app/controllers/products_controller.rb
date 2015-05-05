@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-	
+
 	  protect_from_forgery with: :exception
 
   def index
@@ -37,6 +37,12 @@ class ProductsController < ApplicationController
       render :edit
     end
   end
+
+  def formatted_price
+    price_in_dollars = price_in_cents.to_f / 100
+    sprintf("%.2f", price_in_dollars)
+  end
+  
 
   def destroy
     @product = Product.find(params[:id])

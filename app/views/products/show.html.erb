@@ -1,5 +1,5 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h1>Products<h1>
+
 
  <h3>Reviews</h3>
 
@@ -16,10 +16,10 @@
     </p>
   <% end %>
 
-  % if current_user %>
+  <% if current_user %>
   <h4>New Review</h4>
 
-  <%= form_for([@product, @review]) do |f| %>
+  <%= form_for([@product , @review]) do |f| %>
     <% if @review.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
@@ -43,7 +43,7 @@
 
 <% else %>
   <p>Please <%= link_to "log in", new_session_path %> to add a review.</p> 
+
+
 <% end %>
-
-
 

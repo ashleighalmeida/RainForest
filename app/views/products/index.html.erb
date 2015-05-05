@@ -2,5 +2,13 @@
 
 <p>
 <% @products.each do |product| %>
-<%= @product.formatted_price %> </p>
-<% end %>
+	  <li><%= link_to "#{product.name}-#{product.formatted_price}", product_path(product) %>
+  			
+	  </li>
+
+	  </p>
+
+
+	<% end %>
+
+	
