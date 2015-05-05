@@ -30,7 +30,6 @@ before_filter :ensure_logged_in, only: [:create, :destroy]
     @product = Product.find(params[:product_id])
   end
 end
-app/controllers/products_controller.rb
 
 def show
   @product = Product.find(params[:id])

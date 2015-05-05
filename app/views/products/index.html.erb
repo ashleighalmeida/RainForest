@@ -1,8 +1,10 @@
-<h1>Products#index</h1>
+<h1>Products</h1>
 
 <p>
 <% @products.each do |product| %>
-	  <li><%= link_to "#{product.name}-#{product.formatted_price}", product_path(product) %>
+	  <li><%= link_to "#{product.name}", product_path(product) %> <br>
+	  <%= product.formatted_price %>
+
   			
 	  </li>
 
