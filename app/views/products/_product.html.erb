@@ -1,1 +1,5 @@
-<p>Product Name: <%= product.name %></p>
+<p>
+  <li><%= link_to "#{product.name}", product_path(product) %> <br>
+    <%= product.formatted_price %>
+  </li>
+</p>
